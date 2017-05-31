@@ -49,5 +49,8 @@
   },
   "dependencies": {
     "lodash.flatmap": "^4.5.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
