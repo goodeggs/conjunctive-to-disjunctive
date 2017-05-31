@@ -1,0 +1,53 @@
+{
+  "name": "conjunctive-to-disjunctive",
+  "version": "1.0.0",
+  "description": "Work around mongodb query planning bug",
+  "main": "lib/index.js",
+  "repository": "https://github.com/goodeggs/conjunctive-to-disjunctive.git",
+  "author": "Good Eggs <open-source@goodeggs.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint 'src/**/*.js' --ignore-path .gitignore",
+    "unit": "mocha --compilers=js:babel-register src/**/test.js",
+    "test": "npm run lint && flow && npm run unit"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-goodeggs": "^5.0.2",
+    "flow-bin": "^0.47.0",
+    "goodeggs-test-helpers": "^2.0.0",
+    "mocha": "^3.4.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "flow"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "goodeggs"
+    ],
+    "extends": [
+      "plugin:goodeggs/goodeggs"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "dependencies": {
+    "lodash.flatmap": "^4.5.0"
+  }
+}
