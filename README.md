@@ -5,9 +5,9 @@ planning. (See also: https://jira.mongodb.org/browse/SERVER-13732)
 
 :bug: :bug: :bug:
 
-**NOTE: This bug has been fixed as of MongoDB 3.5.4.** Please don't use
-this library if you're using recent Mongo, since the resulting code will
-be unnecessarily confusing.
+**NOTE: This bug was introduced in MongoDB 2.6.0 and has been fixed as
+of MongoDB 3.5.4.** Please don't use this library if you're using recent
+Mongo, since the resulting code will be unnecessarily confusing.
 
 :bug: :bug: :bug:
 
