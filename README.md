@@ -25,14 +25,14 @@ Transforms queries that are expressed in Conjunctive Normal Form:
 ```js
 {
   $or: [
-    [condition1 AND condition3 AND condition5]
-    [condition1 AND condition3 AND condition6]
-    [condition1 AND condition4 AND condition5]
-    [condition1 AND condition4 AND condition6]
-    [condition2 AND condition3 AND condition5]
-    [condition2 AND condition3 AND condition6]
-    [condition2 AND condition4 AND condition5]
-    [condition2 AND condition4 AND condition6]
+    $and: [condition1, condition3, condition5]
+    $and: [condition1, condition3, condition6]
+    $and: [condition1, condition4, condition5]
+    $and: [condition1, condition4, condition6]
+    $and: [condition2, condition3, condition5]
+    $and: [condition2, condition3, condition6]
+    $and: [condition2, condition4, condition5]
+    $and: [condition2, condition4, condition6]
   ]
 }
 ```
